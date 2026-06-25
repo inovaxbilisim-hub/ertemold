@@ -1,3 +1,5 @@
+'use client';
+
 import ReferencesSection from '@/modules/content/sections/ReferencesSection';
 // types unused in this template
 import { motion } from 'framer-motion';
