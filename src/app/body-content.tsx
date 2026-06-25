@@ -33,10 +33,10 @@ export function BodyStartContent({ data }: { data: LayoutData }) {
 }
 
 export function BodyEndContent({ data }: { data: LayoutData }) {
-  const { isPublicPage, bodyEndActive, settings } = data;
+  const { bodyEndActive, settings } = data;
   return (
     <>
-      {isPublicPage && bodyEndActive && renderInjectedHtml(settings?.codeInjection?.bodyEndCode, 'custom-body-end')}
+      {bodyEndActive && renderInjectedHtml(settings?.codeInjection?.bodyEndCode, 'custom-body-end')}
     </>
   );
 }

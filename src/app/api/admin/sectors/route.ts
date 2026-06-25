@@ -6,7 +6,9 @@ import { ok, unauthorized, badRequest, serverError } from '@/core/api/response';
 import { CACHE_TAGS } from '@/core/cache/tags';
 
 async function revalidateSectors(slug?: string) {
+  // @ts-ignore
   revalidateTag(CACHE_TAGS.SECTORS);
+  // @ts-ignore
   revalidateTag(CACHE_TAGS.SITEMAP_DATA);
   revalidatePath('/sektorler');
   if (slug) {

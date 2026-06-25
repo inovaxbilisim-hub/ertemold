@@ -42,7 +42,7 @@ function getSql() {
 
   // Neon'un Connection Pooler'ı (PgBouncer) search_path ayarını bazen kaybedebiliyor.
   // Her yeni bağlantı açıldığında search_path'i public olarak ayarlayalım.
-  pool.on("connect", (client) => {
+  pool.on("connect", (client: any) => {
     client.query("SET search_path TO public;").catch((err: any) => {
       console.error("[DB] Failed to set search_path on connect:", err);
     });

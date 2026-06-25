@@ -67,7 +67,7 @@ export async function fetchLayoutData(): Promise<LayoutData> {
     await loadActivePlugins(activePlugins, { failFast: false });
   }
 
-  const locale = settings?.locale || 'tr';
+  const locale = 'tr';
   const gtmIdRaw = settings?.codeInjection?.gtmId;
   const gtmIdTrimmed = typeof gtmIdRaw === 'string' ? gtmIdRaw.trim() : '';
   const gtmId = gtmIdTrimmed && /^GTM-[A-Z0-9]+$/i.test(gtmIdTrimmed) ? gtmIdTrimmed.toUpperCase() : null;
