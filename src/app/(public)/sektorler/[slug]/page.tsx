@@ -57,10 +57,6 @@ export default async function SektorDetailPage({ params }: { params: Promise<{ s
   const cta_title = pluginConfig.cta_title || fd('cta_title');
   const cta_text = pluginConfig.cta_text || fd('cta_text');
   const cta_link = pluginConfig.cta_link || fd('cta_link');
-  const solutions_title = pluginConfig.detail_solutions_title || fd('detail_solutions_title');
-  const solutions_subtitle = pluginConfig.detail_solutions_subtitle || fd('detail_solutions_subtitle');
-  const empty_solutions_title = pluginConfig.detail_empty_solutions_title || fd('detail_empty_solutions_title');
-  const empty_solutions_text = pluginConfig.detail_empty_solutions_text || fd('detail_empty_solutions_text');
   const other_sectors_title = pluginConfig.detail_other_sectors_title || fd('detail_other_sectors_title');
   const badge_1_fallback = pluginConfig.detail_badge_1 || fd('detail_badge_1');
   const badge_2_fallback = pluginConfig.detail_badge_2 || fd('detail_badge_2');

@@ -81,7 +81,6 @@ const nextConfig = {
   experimental: {
     // Tree-shaking: yalnızca kullanılan ikonlar/animasyonlar bundle'a girer
     optimizePackageImports: ['lucide-react', 'framer-motion'],
-    instrumentationHook: true,
   },
 
   // Turbopack kuralı: SQL, MD ve bilinmeyen dosya türlerini yoksay

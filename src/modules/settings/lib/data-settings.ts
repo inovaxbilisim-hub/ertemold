@@ -362,5 +362,7 @@ export async function getAIConfig(): Promise<{
     ai_prompt_sector_faq_json: String(row.ai_prompt_sector_faq_json || ''),
     ai_sector_faq_min_count: Number(row.ai_sector_faq_min_count ?? 5),
     ai_model: String(row.ai_model || ''),
+    openrouter_ai_model: String(row.openrouter_ai_model || ''),
+    gemini_ai_model: String(row.gemini_ai_model || ''),
   };
 }
