@@ -18,9 +18,11 @@ import { getAllPages } from '@/domains/content/lib/data-pages';
 
 export async function generateStaticParams() {
   const pages = await getAllPages();
-  return pages.map((page) => ({
-    slug: page.slug.split('/').filter(Boolean),
-  }));
+  return pages
+    .filter((page) => page.slug !== '/' && page.slug !== '')
+    .map((page) => ({
+      slug: page.slug.split('/').filter(Boolean),
+    }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
