@@ -1,0 +1,54 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "success": "İşlem başarılı",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "create": "Yeni Ekle",
+    "search": "Ara...",
+    "noData": "Veri bulunamadı"
+  },
+  "admin": {
+    "title": "Yönetim Paneli",
+    "dashboard": "Dashboard",
+    "services": "Hizmetler",
+    "references": "Referanslar",
+    "sectors": "Sektörler",
+    "settings": "Genel Ayarlar",
+    "logout": "Çıkış Yap",
+    "viewSite": "Siteyi Görüntüle",
+    "categories": {
+      "overview": "GENEL BAKIŞ",
+      "content": "İÇERİK YÖNETİMİ",
+      "seo": "SEO & OTOMASYON",
+      "design": "TASARIM & YAPI",
+      "system": "SİSTEM"
+    },
+    "menu": {
+      "dashboard": "Dashboard",
+      "pages": "Sayfa Yönetimi",
+      "services": "Hizmetler",
+      "references": "Referanslar",
+      "sectors": "Sektörler",
+      "faqs": "SSS Yönetimi",
+      "stats": "Site Sayaçları",
+      "pseo": "pSEO Motoru",
+      "pseo_locations": "pSEO Lokasyonlar",
+      "ai_settings": "Yapay Zeka",
+      "seo": "SEO Yönetimi",
+      "navigation": "Menü Yönetimi",
+      "footer": "Footer Yönetimi",
+      "sections": "Bölüm İçerikleri",
+      "hero": "Hero Yönetimi",
+      "settings": "Genel Ayarlar",
+      "branches": "Şube Yönetimi",
+      "themes": "Temalar",
+      "plugins": "Modüller (Eklentiler)",
+      "users": "Kullanıcılar",
+      "legal": "Yasal Sayfalar"
+    }
+  }
+}

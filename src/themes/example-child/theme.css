@@ -1,0 +1,39 @@
+/**
+ * Example Child Theme CSS
+ * 
+ * Bu CSS parent temanın CSS'inden SONRA yüklenir
+ * Parent CSS'i override edebilir
+ */
+
+/* Parent tema renklerini override et */
+:root {
+  --color-primary-val: #10B981 !important;
+  --color-accent-val: #8B5CF6 !important;
+}
+
+/* Child temaya özel stiller */
+.theme-example-child body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.theme-example-child header {
+  border-bottom: 3px solid var(--color-primary-val);
+}
+
+.theme-example-child footer {
+  background: linear-gradient(135deg, #10B981, #059669);
+}
+
+/* Butonları override et */
+.theme-example-child button,
+.theme-example-child .btn {
+  border-radius: 9999px; /* Fully rounded */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Kartları override et */
+.theme-example-child .card {
+  border: 2px solid var(--color-primary-val);
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.1);
+}

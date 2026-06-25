@@ -1,0 +1,54 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Operation successful",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create New",
+    "search": "Search...",
+    "noData": "No data found"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Dashboard",
+    "services": "Services",
+    "references": "References",
+    "sectors": "Sectors",
+    "settings": "General Settings",
+    "logout": "Logout",
+    "viewSite": "View Site",
+    "categories": {
+      "overview": "OVERVIEW",
+      "content": "CONTENT MANAGEMENT",
+      "seo": "SEO & AUTOMATION",
+      "design": "DESIGN & STRUCTURE",
+      "system": "SYSTEM"
+    },
+    "menu": {
+      "dashboard": "Dashboard",
+      "pages": "Page Management",
+      "services": "Services",
+      "references": "References",
+      "sectors": "Sectors",
+      "faqs": "FAQ Management",
+      "stats": "Site Statistics",
+      "pseo": "pSEO Engine",
+      "pseo_locations": "pSEO Locations",
+      "ai_settings": "Artificial Intelligence",
+      "seo": "SEO Management",
+      "navigation": "Menu Management",
+      "footer": "Footer Management",
+      "sections": "Section Content",
+      "hero": "Hero Management",
+      "settings": "General Settings",
+      "branches": "Branch Management",
+      "themes": "Themes",
+      "plugins": "Modules (Plugins)",
+      "users": "Users",
+      "legal": "Legal Pages"
+    }
+  }
+}

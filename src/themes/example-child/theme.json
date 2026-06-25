@@ -1,0 +1,30 @@
+{
+  "slug": "example-child",
+  "name": "Example Child Theme",
+  "description": "Default temasının child tema örneği. Parent tema özelliklerini inherit eder ve override edebilir.",
+  "author": "Your Name",
+  "version": "1.0.0",
+  "parent": "default",
+  "requires": "1.0.0",
+  "tags": ["child", "example", "demo"],
+  "support": {
+    "customHeader": true,
+    "customBackground": true
+  },
+  "settingsSchema": {
+    "child_primary_color": {
+      "type": "color",
+      "label": "Child Ana Renk",
+      "default": "#10B981",
+      "section": "colors",
+      "helpText": "Child temanın ana rengi (parent'ı override eder)"
+    },
+    "child_accent_color": {
+      "type": "color",
+      "label": "Child Vurgu Rengi",
+      "default": "#8B5CF6",
+      "section": "colors",
+      "helpText": "Child temanın vurgu rengi"
+    }
+  }
+}

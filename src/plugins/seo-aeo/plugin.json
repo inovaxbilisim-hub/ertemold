@@ -1,0 +1,18 @@
+{
+  "name": "SEO & AEO Core",
+  "version": "2.0.0",
+  "description": "Şehir ve referans sayfaları için gerçek veriye dayalı görsel özet bloğu üretir. JSON-LD schema (Service, FAQPage, HowTo, Organization) SchemaGenerator tarafından zaten üretilmektedir.",
+  "author": "Antigravity",
+  "priority": 40,
+  "configSchema": {
+    "fields": [
+      {
+        "key": "enabled",
+        "label": "Aktif",
+        "type": "checkbox",
+        "default": true,
+        "helpText": "Kapatıldığında görsel AEO özet bloğu hiçbir sayfada gösterilmez."
+      }
+    ]
+  }
+}

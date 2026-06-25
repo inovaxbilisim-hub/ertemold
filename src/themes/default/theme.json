@@ -1,0 +1,106 @@
+{
+  "slug": "default",
+  "name": "ERTEM Core",
+  "description": "Sistemin gömülü varsayılan teması. Epoksi ve zemin kaplama sektörü için optimize edilmiş kurumsal tasarım.",
+  "author": "Antigravity",
+  "version": "1.0.0",
+  "parent": null,
+  "requires": "1.0.0",
+  "screenshot": "/themes/default/screenshot.webp",
+  "tags": ["corporate", "industrial", "responsive", "epoxy"],
+  "support": {
+    "customHeader": true,
+    "customBackground": true,
+    "widgetAreas": ["sidebar", "footer-1", "footer-2", "footer-3"]
+  },
+  "settingsSchema": {
+    "primary_color": {
+      "type": "color",
+      "label": "Ana Renk",
+      "default": "#2563EB",
+      "section": "colors",
+      "helpText": "Butonlar, linkler ve vurgu öğelerinde kullanılır."
+    },
+    "primary_dark_color": {
+      "type": "color",
+      "label": "Ana Renk (Koyu)",
+      "default": "#1D4ED8",
+      "section": "colors",
+      "helpText": "Aktif/hover durumlarında kullanılır."
+    },
+    "accent_color": {
+      "type": "color",
+      "label": "Vurgu Rengi",
+      "default": "#F97316",
+      "section": "colors",
+      "helpText": "İkincil butonlar ve özel vurgularda kullanılır."
+    },
+    "accent_teal": {
+      "type": "color",
+      "label": "Turkuaz Vurgu",
+      "default": "#00d4aa",
+      "section": "colors",
+      "helpText": "Gradient metin ve özel badge'lerde kullanılır."
+    },
+    "border_radius": {
+      "type": "select",
+      "label": "Köşe Yuvarlaklığı",
+      "default": "16",
+      "options": [
+        { "label": "Keskin (4px)", "value": "4" },
+        { "label": "Yumuşak (8px)", "value": "8" },
+        { "label": "Orta (12px)", "value": "12" },
+        { "label": "Varsayılan (16px)", "value": "16" },
+        { "label": "Çok Yuvarlak (24px)", "value": "24" }
+      ],
+      "section": "layout",
+      "helpText": "Kart ve butonların köşe yuvarlaklığını belirler."
+    },
+    "max_width": {
+      "type": "select",
+      "label": "Sayfa Genişliği",
+      "default": "1200",
+      "options": [
+        { "label": "Dar (960px)", "value": "960" },
+        { "label": "Normal (1100px)", "value": "1100" },
+        { "label": "Geniş (1200px)", "value": "1200" },
+        { "label": "Çok Geniş (1400px)", "value": "1400" }
+      ],
+      "section": "layout"
+    },
+    "font_family": {
+      "type": "select",
+      "label": "Yazı Tipi",
+      "default": "Inter",
+      "options": [
+        { "label": "Inter (Varsayılan)", "value": "Inter" },
+        { "label": "Plus Jakarta Sans", "value": "Plus Jakarta Sans" },
+        { "label": "Manrope", "value": "Manrope" },
+        { "label": "DM Sans", "value": "DM Sans" }
+      ],
+      "section": "typography"
+    },
+    "show_scroll_top": {
+      "type": "checkbox",
+      "label": "Yukarı Çık Butonu Göster",
+      "default": true,
+      "section": "general"
+    },
+    "header_sticky": {
+      "type": "checkbox",
+      "label": "Sabit Üst Menü",
+      "default": true,
+      "section": "header"
+    },
+    "footer_columns": {
+      "type": "select",
+      "label": "Altbilgi Sütun Sayısı",
+      "default": "4",
+      "options": [
+        { "label": "3 Sütun", "value": "3" },
+        { "label": "4 Sütun", "value": "4" }
+      ],
+      "section": "footer"
+    }
+  }
+}

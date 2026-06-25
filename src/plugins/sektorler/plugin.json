@@ -1,0 +1,108 @@
+{
+  "name": "Sektörler Sayfası",
+  "version": "1.0.0",
+  "description": "Firmanızın hizmet verdiği endüstrileri detaylı bir yapılandırmayla sunan modüldür. Her sektör için uyarlanmış teknik çözümleri, alt hizmet alanlarını ve başarı referanslarını bir araya getirerek güçlü bir kurumsal portföy oluşturur.",
+  "author": "Antigravity",
+  "priority": 20,
+  "configSchema": {
+    "fields": [
+      {
+        "key": "title",
+        "label": "Sayfa Başlığı",
+        "type": "text",
+        "default": "Sektörlerimiz"
+      },
+      {
+        "key": "subtitle",
+        "label": "Alt Başlık",
+        "type": "textarea",
+        "default": "Her sektöre uygun teknik çözümlerle işinizi güçlendiriyoruz."
+      },
+      {
+        "key": "intro_text",
+        "label": "Giriş Metni",
+        "type": "textarea",
+        "default": "Aşağıdaki sektörler için uzman ekiplerimiz özel teknik çözümler, saha destekleri ve proje yönetimi hizmetleri sunar."
+      },
+      {
+        "key": "cta_title",
+        "label": "CTA Başlığı",
+        "type": "text",
+        "default": "Sektörünüz için teklif alın"
+      },
+      {
+        "key": "cta_text",
+        "label": "CTA Buton Metni",
+        "type": "text",
+        "default": "Hemen Teklif Al"
+      },
+      {
+        "key": "cta_link",
+        "label": "CTA Hedef URL",
+        "type": "text",
+        "default": "/iletisim"
+      },
+      {
+        "key": "seo_title",
+        "label": "SEO Başlığı",
+        "type": "text",
+        "default": "Sektörlerimiz | Kurumsal Hizmetler"
+      },
+      {
+        "key": "seo_description",
+        "label": "SEO Açıklaması",
+        "type": "textarea",
+        "default": "Sektörel uzmanlıkla üretim, lojistik, sağlık ve ağır sanayi dahil her alanda teknik çözümler sunuyoruz."
+      },
+      {
+        "key": "featured_sector_slugs",
+        "label": "Öne Çıkan Sektör Slugları",
+        "type": "textarea",
+        "default": "",
+        "helpText": "Virgülle ayırın. Boş bırakılırsa tüm aktif sektörler gösterilir."
+      },
+      {
+        "key": "detail_solutions_title",
+        "label": "Detay Sayfası: Çözümler Başlığı",
+        "type": "text",
+        "default": "Önerilen Çözümler"
+      },
+      {
+        "key": "detail_solutions_subtitle",
+        "label": "Detay Sayfası: Çözümler Alt Başlığı",
+        "type": "textarea",
+        "default": "Sektörünüzdeki operasyonel gereksinimleri karşılamak için geliştirdiğimiz özel zemin sistemleri."
+      },
+      {
+        "key": "detail_empty_solutions_title",
+        "label": "Detay Sayfası: Boş Çözüm Başlığı",
+        "type": "text",
+        "default": "Özel Çözümler Hazırlanıyor"
+      },
+      {
+        "key": "detail_empty_solutions_text",
+        "label": "Detay Sayfası: Boş Çözüm Metni",
+        "type": "textarea",
+        "default": "Bu sektör için özel olarak tanımlanmış standart paketlerimiz güncellenmektedir. Sektörünüze özel projelendirme için bizimle iletişime geçebilirsiniz."
+      },
+      {
+        "key": "detail_other_sectors_title",
+        "label": "Detay Sayfası: Diğer Sektörler Başlığı",
+        "type": "text",
+        "default": "İncelemek İsteyebileceğiniz Diğer Sektörler"
+      },
+      {
+        "key": "detail_badge_1",
+        "label": "Detay Sayfası: Rozet 1 (Varsayılan)",
+        "type": "text",
+        "default": "Tam Uyumluluk"
+      },
+      {
+        "key": "detail_badge_2",
+        "label": "Detay Sayfası: Rozet 2 (Varsayılan)",
+        "type": "text",
+        "default": "Yüksek Dayanıklılık"
+      }
+    ]
+  }
+}

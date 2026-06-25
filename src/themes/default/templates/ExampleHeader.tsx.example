@@ -1,0 +1,65 @@
+/**
+ * Örnek Header Template Override
+ * 
+ * Kullanım:
+ * 1. Bu dosyayı Header.tsx olarak rename et
+ * 2. Tema aktif olduğunda otomatik kullanılacak
+ * 3. Core Header yerine bu render edilecek
+ */
+
+import React from 'react';
+import Link from 'next/link';
+
+interface HeaderProps {
+  initialServices?: any[];
+  initialCategories?: any[];
+}
+
+export default function Header({ initialServices, initialCategories }: HeaderProps) {
+  return (
+    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="text-2xl font-bold">
+            ✨ ERTEM Epoksi
+          </Link>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            <Link href="/" className="hover:text-blue-200 transition">
+              Ana Sayfa
+            </Link>
+            <Link href="/hizmetler" className="hover:text-blue-200 transition">
+              Hizmetler
+            </Link>
+            <Link href="/referanslar" className="hover:text-blue-200 transition">
+              Referanslar
+            </Link>
+            <Link href="/iletisim" className="hover:text-blue-200 transition">
+              İletişim
+            </Link>
+          </nav>
+
+          {/* CTA Button */}
+          <button className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition">
+            Teklif Al
+          </button>
+        </div>
+      </div>
+
+      {/* Özelleştirilmiş Header Badge */}
+      <div className="bg-blue-700/30 text-center py-1 text-sm">
+        🎨 Bu header tema tarafından özelleştirilmiştir
+      </div>
+    </header>
+  );
+}
+
+/**
+ * NOTLAR:
+ * - Bu component src/shared/layout/Header.tsx yerine kullanılır
+ * - initialServices ve initialCategories props'ları layout'tan gelir
+ * - Tema değiştirildiğinde core header'a geri döner
+ * - CSS class'ları theme.css'den alınabilir
+ */

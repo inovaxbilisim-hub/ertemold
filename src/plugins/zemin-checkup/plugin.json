@@ -1,0 +1,41 @@
+{
+  "name": "Zemin Check-up Widget",
+  "version": "1.0.0",
+  "description": "Sayfa aralarında veya sonlarında gösterilebilen, kullanıcıların ücretsiz zemin analizi talebinde bulunmalarını sağlayan interaktif bir widget aracıdır. Ziyaretçilerin iletişim bilgilerini toplayarak potansiyel müşteri dönüşüm oranlarını (lead generation) artırır.",
+  "author": "Antigravity",
+  "priority": 10,
+  "configSchema": {
+    "fields": [
+      {
+        "key": "webhook_url",
+        "label": "Webhook URL",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "key": "button_text",
+        "label": "Buton Metni",
+        "type": "text",
+        "default": "Ücretsiz Check-up İste"
+      },
+      {
+        "key": "highlight_color",
+        "label": "Vurgu Rengi",
+        "type": "text",
+        "default": "#3b82f6"
+      },
+      {
+        "key": "enable_recaptcha",
+        "label": "reCAPTCHA Aktif",
+        "type": "checkbox",
+        "default": false
+      },
+      {
+        "key": "success_message",
+        "label": "Başarı Mesajı",
+        "type": "textarea",
+        "default": "Talebiniz alınmıştır. En kısa sürede size dönüş yapacağız."
+      }
+    ]
+  }
+}

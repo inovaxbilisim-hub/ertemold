@@ -1,0 +1,45 @@
+{
+  "name": "Dinamik Proje Zaman Tüneli",
+  "version": "1.0.0",
+  "description": "Projelerin aşamalarını ve teknik gelişim süreçlerini interaktif, görsel bir zaman çizelgesi (timeline) formatında sergilemenizi sağlar. Proje şeffaflığını artırarak kurumsal vizyonu ve teknik uzmanlığı ziyaretçilere net bir şekilde aktarır.",
+  "author": "Antigravity",
+  "priority": 15,
+  "configSchema": {
+    "fields": [
+      {
+        "key": "default_view",
+        "label": "Görünüm Yönü",
+        "type": "select",
+        "options": [
+          {
+            "label": "Dikey",
+            "value": "vertical"
+          },
+          {
+            "label": "Yatay",
+            "value": "horizontal"
+          }
+        ],
+        "default": "vertical"
+      },
+      {
+        "key": "color_theme",
+        "label": "Tema Rengi",
+        "type": "text",
+        "default": "#2563eb"
+      },
+      {
+        "key": "show_dates",
+        "label": "Tarihleri Göster",
+        "type": "checkbox",
+        "default": true
+      },
+      {
+        "key": "animation_speed",
+        "label": "Animasyon Hızı (ms)",
+        "type": "number",
+        "default": 300
+      }
+    ]
+  }
+}

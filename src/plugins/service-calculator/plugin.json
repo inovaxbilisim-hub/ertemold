@@ -1,0 +1,162 @@
+{
+  "name": "Hizmet Hesaplayıcı",
+  "version": "1.0.0",
+  "description": "Modüler metrekare hesaplayıcıyı belirli hizmet sayfalarında göstermek için eklenti.",
+  "author": "Antigravity",
+  "priority": 20,
+  "configSchema": {
+    "fields": [
+      {
+        "key": "render_on_service_pages",
+        "label": "Hizmet sayfalarında göster",
+        "type": "checkbox",
+        "default": true,
+        "helpText": "Bu modül aktifse, seçili hizmet sayfalarında hesaplayıcı gösterilir."
+      },
+      {
+        "key": "currency",
+        "label": "Para birimi",
+        "type": "select",
+        "options": [
+          { "label": "Euro (€)", "value": "EUR" },
+          { "label": "Türk Lirası (TL)", "value": "TL" },
+          { "label": "Dolar ($)", "value": "USD" }
+        ],
+        "default": "EUR",
+        "helpText": "Hesaplama sonuçları için kullanılacak para birimini seçin."
+      },
+      {
+        "key": "thickness_labels",
+        "label": "Ön tanımlı kalınlıklar",
+        "type": "key_value",
+        "default": [
+          { "label": "1", "value": "1" },
+          { "label": "2", "value": "2" },
+          { "label": "3", "value": "3" },
+          { "label": "4", "value": "4" }
+        ],
+        "helpText": "Servis yapılandırmasında kullanılabilecek kalınlık değerlerini burada belirleyin."
+      },
+      {
+        "key": "button_text",
+        "label": "Buton metni",
+        "type": "text",
+        "default": "Teklif Hesapla"
+      },
+      {
+        "key": "result_title",
+        "label": "Teklif Sonuç Başlığı",
+        "type": "text",
+        "default": "Net fiyat için lütfen bizimle iletişime geçin"
+      },
+      {
+        "key": "result_description",
+        "label": "Teklif Sonuç Açıklaması",
+        "type": "textarea",
+        "default": "Belirtilen değerler ön keşif sonrası kesinleşecektir. Minimum alan {minimum_area} m²'dir. Net fiyat için lütfen bizimle iletişime geçin."
+      },
+      {
+        "key": "result_cta_text",
+        "label": "Teklif Sonuç CTA Metni",
+        "type": "text",
+        "default": "Hemen İletişime Geç"
+      },
+      {
+        "key": "minimum_area",
+        "label": "Minimum Alan (m²)",
+        "type": "number",
+        "default": 10,
+        "helpText": "Çalışılabilecek minimum proje alanını belirtin."
+      },
+      {
+        "key": "extra_services",
+        "label": "Opsiyonel ek hizmetler",
+        "type": "key_value",
+        "default": [],
+        "helpText": "Her satır için bir ek hizmet adı ve m² başına fiyat girin. Fiyat 0 olursa hizmet ücretsiz kabul edilir."
+      },
+      {
+        "key": "disclaimer",
+        "label": "Uyarı metni",
+        "type": "textarea",
+        "default": "Nihai fiyat keşif sonrası netleşir."
+      },
+      {
+        "key": "placement",
+        "label": "Yerleşim Türü",
+        "type": "select",
+        "options": [
+          { "label": "Tüm Sayfalar (Hizmet + İl)", "value": "all" },
+          { "label": "Sadece Ana Hizmet Sayfaları", "value": "service_only" },
+          { "label": "Sadece İl Alt Sayfaları", "value": "location_only" },
+          { "label": "Sadece /hesaplama Sayfaları", "value": "calculator_page_only" },
+          { "label": "Gösterme (Tümünde CTA Butonu)", "value": "cta_only" }
+        ],
+        "default": "service_only",
+        "helpText": "Hesaplayıcının hangi sayfa türlerinde otomatik olarak görüneceğini seçin. 'CTA Butonu' seçeneği hesaplayıcı yerine /hesaplama sayfasına yönlendiren buton gösterir."
+      },
+      {
+        "key": "cta_button_text",
+        "label": "CTA Buton Metni (Hesaplayıcı Gizliyken)",
+        "type": "text",
+        "default": "Fiyat Hesapla",
+        "helpText": "Hesaplayıcı gizli olduğunda gösterilecek buton metni. /hesaplama sayfasına yönlendirir."
+      },
+      {
+        "key": "cta_button_icon",
+        "label": "CTA Buton İkonu",
+        "type": "select",
+        "options": [
+          { "label": "Hesap Makinesi", "value": "Calculator" },
+          { "label": "Ok İşareti", "value": "ArrowRight" },
+          { "label": "Para İşareti", "value": "DollarSign" },
+          { "label": "İkon Yok", "value": "none" }
+        ],
+        "default": "Calculator",
+        "helpText": "CTA butonunda gösterilecek ikon."
+      },
+      {
+        "key": "seo_enable_m2_price_page",
+        "label": "m² Fiyat Sayfası",
+        "type": "checkbox",
+        "default": true,
+        "helpText": "Hizmetler için özel m² fiyat teklifi sayfalarının oluşturulmasına izin verir."
+      },
+      {
+        "key": "seo_content_mode",
+        "label": "SEO İçerik Modu",
+        "type": "select",
+        "options": [
+          { "label": "Sadece Hizmet", "value": "service_only" },
+          { "label": "Hizmet + Şehir", "value": "service_city" }
+        ],
+        "default": "service_city",
+        "helpText": "m² fiyat sayfalarının hangi içerik derinliğiyle oluşturulacağını belirler."
+      },
+      {
+        "key": "seo_page_title_template",
+        "label": "SEO Başlık Şablonu",
+        "type": "text",
+        "default": "{city} için {service} m² fiyat teklifi"
+      },
+      {
+        "key": "seo_page_description_template",
+        "label": "SEO Açıklama Şablonu",
+        "type": "textarea",
+        "default": "{city} için {service} m² fiyat teklifini hemen alın. Hızlı keşif ve detaylı teklif."
+      },
+      {
+        "key": "seo_page_body_template",
+        "label": "SEO Sayfa İçeriği",
+        "type": "textarea",
+        "default": "<p>{city} bölgesinde {service} m² fiyat teklifini hemen alın. Teknik keşif, hızlı dönüş ve profesyonel uygulama.</p>"
+      },
+      {
+        "key": "seo_thin_content_warning",
+        "label": "Thin Content Uyarısı",
+        "type": "textarea",
+        "default": "Şehir bazlı URL oluşturuluyorsa, içerik her şehir için özel ve anlamlı olmalıdır. Thin content ise şehir segmenti kaldırılabilir."
+      }
+    ]
+  }
+}

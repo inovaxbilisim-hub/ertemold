@@ -1,0 +1,22 @@
+/* ERTEM Core Default Theme
+   This theme uses the system's built-in CSS variables defined in globals.css.
+   Additional overrides or custom properties can be added here.
+   Other themes replace these variables entirely. */
+
+.theme-default {
+  /* Inherits all variables from :root in globals.css */
+  --theme-name: 'ERTEM Core';
+  --theme-version: '1.0.0';
+}
+
+.theme-default .btn-primary {
+  border-radius: 12px;
+}
+
+.theme-default .btn-secondary {
+  border-radius: 12px;
+}
+
+.theme-default .glass-card {
+  border-radius: 16px;
+}

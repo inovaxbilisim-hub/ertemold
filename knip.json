@@ -1,0 +1,27 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "src/app/**/page.tsx",
+    "src/app/**/layout.tsx",
+    "src/app/api/**/route.ts",
+    "src/domains/**/index.ts",
+    "src/modules/**/index.ts",
+    "src/plugins/*/plugin.json"
+  ],
+  "project": ["src/**/*.{ts,tsx}"],
+  "ignoreDependencies": ["tailwindcss", "tsx"],
+  "ignore": [
+    "src/hooks/**",
+    "src/plugins/_registry.ts",
+    "src/plugins/__available-hooks.ts",
+    "src/modules/admin/components/tabs/ReferencesTab.tsx",
+    "src/modules/admin/components/tabs/SettingsTab.tsx",
+    "src/modules/admin/components/tabs/stats/**",
+    "src/modules/admin/components/tabs/StatsTab.tsx",
+    "src/modules/admin/components/UniversalIconPicker.tsx"
+  ],
+  "ignoreExportsUsedInFile": {
+    "interface": true,
+    "type": true
+  }
+}
