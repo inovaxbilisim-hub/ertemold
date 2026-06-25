@@ -1,13 +1,6 @@
 import "server-only";
 import { Pool as PgPool } from "pg";
-import { Pool as NeonPool, neonConfig } from "@neondatabase/serverless";
-import ws from "ws";
-
-neonConfig.webSocketConstructor = ws;
-// Eğer sunucu WebSocket bağlantı limitini aşıyorsa: fetch (HTTP) üzerinden çalışması için
-neonConfig.poolQueryViaFetch = true;
-
-let pool: PgPool | NeonPool | null = null;
+let pool: PgPool | null = null;
 
 function getSql() {
   if (pool) return pool;
@@ -26,19 +19,12 @@ function getSql() {
     } as any;
   }
 
-  if (process.env.NODE_ENV === 'development') {
-    // Geliştirme (Local) ortamında standart 'pg' sürücüsünü kullan
-    pool = new PgPool({
-      connectionString: url,
-      max: 10,
-      idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 5000,
-    });
-  } else {
-    pool = new NeonPool({
-      connectionString: url,
-    });
-  }
+  pool = new PgPool({
+    connectionString: url,
+    max: 10,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 5000,
+  });
 
   // Neon'un Connection Pooler'ı (PgBouncer) search_path ayarını bazen kaybedebiliyor.
   // Her yeni bağlantı açıldığında search_path'i public olarak ayarlayalım.

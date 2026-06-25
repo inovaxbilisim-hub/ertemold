@@ -19,7 +19,7 @@ import { getAllPages } from '@/domains/content/lib/data-pages';
 export async function generateStaticParams() {
   const pages = await getAllPages();
   return pages.map((page) => ({
-    slug: page.slug.split('/'),
+    slug: page.slug.split('/').filter(Boolean),
   }));
 }
 
