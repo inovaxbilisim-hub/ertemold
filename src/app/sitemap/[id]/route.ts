@@ -35,7 +35,9 @@ export async function GET(
   const resolvedParams = await params;
   const id = resolvedParams.id;
 
-  const baseUrl = await getSiteUrl();
+  const host = request.headers.get('host');
+  const proto = request.headers.get('x-forwarded-proto') || 'https';
+  const baseUrl = host ? `${proto}://${host}` : await getSiteUrl();
 
   if (id === 'pages.xml') {
     const { pages: dbPages } = await getSitemapData();

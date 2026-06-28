@@ -34,14 +34,16 @@ function buildXml(entries: { url: string; lastModified?: string; changeFrequency
 }
 
 export async function GET(
-  _request: Request,
+  request: Request,
   { params }: { params: Promise<{ chunk: string }> }
 ) {
   const resolvedParams = await params;
   const chunkId = parseInt(resolvedParams.chunk.replace('.xml', ''), 10) || 0;
 
   const settings = await getSettings().catch(() => null);
-  const baseUrl = await getSiteUrl();
+  const host = request.headers.get('host');
+  const proto = request.headers.get('x-forwarded-proto') || 'https';
+  const baseUrl = host ? `${proto}://${host}` : await getSiteUrl();
   const CHUNK_SIZE = settings?.sitemapChunkSize !== undefined && settings.sitemapChunkSize > 0
     ? settings.sitemapChunkSize
     : 50000;

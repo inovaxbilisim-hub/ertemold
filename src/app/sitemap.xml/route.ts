@@ -3,9 +3,11 @@ import { getSettings } from '@/lib/data';
 import { getSiteUrl } from '@/core/utils/host';
 import { getPotentialPseoCount } from '@/modules/seo/lib/pseo-utils';
 
-export async function GET() {
+export async function GET(request: Request) {
   const settings = await getSettings().catch(() => null);
-  const baseUrl = await getSiteUrl();
+  const host = request.headers.get('host');
+  const proto = request.headers.get('x-forwarded-proto') || 'https';
+  const baseUrl = host ? `${proto}://${host}` : await getSiteUrl();
 
   const CHUNK_SIZE = settings?.sitemapChunkSize !== undefined && settings.sitemapChunkSize > 0
     ? settings.sitemapChunkSize
